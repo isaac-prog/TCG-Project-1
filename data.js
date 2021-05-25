@@ -1,12 +1,12 @@
-///////Total/////////////////////////
-async function loadData(url) {
+//Total
+async function loadTotalData(url) {
     const response = await axios.get(url);
     console.log(response.data.Level1);
     console.log("load1");
     return response.data.Level1;
 }
 
-function transformData(rawData){
+function transformTotalData(rawData){
     // accumulator array that will store the final
     // results
     let series = [];
@@ -26,14 +26,14 @@ function transformData(rawData){
 
 //Female
 
-async function loadData2(url) {
+async function loadFemaleData(url) {
     const response = await axios.get(url);
     console.log(response.data.Level2);    
     console.log("load2");
     return response.data.Level2;
 }
 
-function transformData2(rawData){
+function transformFemaleData(rawData){
     // accumulator array that will store the final
     // results
     let series = [];
@@ -57,14 +57,14 @@ function transformData2(rawData){
 
 //male
 
-async function loadData3(url) {
+async function loadMaleData(url) {
     const response = await axios.get(url);
     console.log(response.data.Level2);    
     console.log("load3");
     return response.data.Level2;
 }
 
-function transformData3(rawData){
+function transformMaleData(rawData){
     // accumulator array that will store the final
     // results
     let series = [];

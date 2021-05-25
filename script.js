@@ -13,9 +13,9 @@ const chart = new ApexCharts(document.querySelector('#chart'), chartOptions);
 chart.render();
 
 // global variable
-let data;
-let data2;
-let data3;
+let totalData;
+let famaleData;
+let maleData;
 
 // event handlers
 document.querySelector("#filter-btn").addEventListener('click', function(){
@@ -26,14 +26,14 @@ document.querySelector("#filter-btn").addEventListener('click', function(){
     let endYear = parseInt(document.querySelector('#end-year').value);
     //let inputSex = parse(document.querySelector('#sex').value);
 
-    let filtered = data.filter(function(d){
-        return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
+    let filtered = totalData.filter(function(d){
+        return d.x >= startYear && d.x <= endYear
     })
-    let filtered2 = data2.filter(function(d){
-        return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
+    let filtered2 = femaleData.filter(function(d){
+        return d.x >= startYear && d.x <= endYear
     })
-    let filtered3 = data3.filter(function(d){
-        return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
+    let filtered3 = maleData.filter(function(d){
+        return d.x >= startYear && d.x <= endYear
     })
     chart.updateSeries([
         {
@@ -54,28 +54,25 @@ document.querySelector("#filter-btn").addEventListener('click', function(){
 })
 
 window.addEventListener('DOMContentLoaded',async function(){
-data = await loadData('https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json');
-data = transformData(data);
-data2 = await loadData2("https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json");
-data2 = transformData2(data2);
-data3 = await loadData3('https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json');
-data3 = transformData3(data3);
+totalData = await loadTotalData('./cTest.json');
+totalData = transformTotalData(totalData);
+femaleData = await loadFemaleData("./cTest.json");
+femaleData = transformFemaleData(femaleData);
+maleData = await loadMaleData('./cTest.json');
+maleData = transformMaleData(maleData);
 
 chart.updateSeries([
 {
    'name':'Total drug abusers',
-   'data': data
+   'data': totalData
 },
 {
   'name': 'Female drug abusers',
-  'data': data2
+  'data': femaleData
 },
 {
   'name': 'Male drug abusers',
-  'data': data3
+  'data': maleData
 }
 ])
 })
-
-
-
