@@ -1,23 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div style="height:80vh">
-      <div id="chart"></div>
-    </div>
-    <div>
-      <input type="text" id="start-year" placeholder="Enter start year"/>
-      <input type="text" id="end-year" placeholder="Enter end year"/>
-      <button id="filter-btn">Filter</button>
-    </div>
+<title>Counselling</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <div class="nav">
+  <div class="navbar-contents color-black box">
+    <a class="navbar-contents-item button no-display-medium no-display-large burger-right black-hover  color-black" onclick="hamburgerHTML()">
+    <i class="fa fa-bars"></i></a>
+    <a href="./" class="navbar-contents-item button color-black">Home</a>
+    <a href="#" class="navbar-contents-item button no-display-small hover-black">Help</a>
+    <a href="#" class="navbar-contents-item button no-display-small hover-black">Statistics</a>
+    <a href="#" class="navbar-contents-item button no-display-small hover-black">About Us</a>
+    <a href="#" class="navbar-contents-item button no-display-small hover-black">Bug report</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navbar" class="navbar-contents-block color-black no-display no-display-large no-display-medium ">
+    <a href="#" class="navbar-contents-item button ">Help</a>
+    <a href="#" class="navbar-contents-item button ">Statistics</a>
+    <a href="#" class="navbar-contents-item button ">About Us</a>
+    <a href="#" class="navbar-contents-item button ">Bug report</a>
+  </div>
+</div>
+</head>
+<body>
+
+<!-- Header -->
+<header class="page1-center" style="padding:128px 16px">
+  <h1 class="DrugVio-alignment">DrugVio</h1>
+  <p class ="header-subclass"><b>The help you need</b></p>
+  <button class="button color-black margin-top">Get Started</button>
+</header>
+
+<!-- First Grid -->
+
+  <div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+
+</div>
+
+<!-- Footer -->
+<footer class="final-footer">  
+    <i class="fa fa-facebook-official"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-snapchat"></i>
+    <i class="fa fa-pinterest-p"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-linkedin"></i>
+ </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
 </html>

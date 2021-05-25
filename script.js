@@ -19,7 +19,6 @@ let maleData;
 
 // event handlers
 document.querySelector("#filter-btn").addEventListener('click', function(){
-  //Trying to change/update the chart to the 2nd Data with Sex
   //updateTable("cTest.json");
 
     let startYear = parseInt(document.querySelector('#start-year').value);
