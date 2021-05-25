@@ -15,7 +15,7 @@ function transformData(rawData){
         // that apex chart expects
         series.push({
             'x': parseInt(datnum.year),
-            'value': parse(datnum.level_1),
+            'value': parseInt(datnum.level_1),
             'y': parseFloat(datnum.value)
         })
     }
@@ -36,13 +36,14 @@ function transformData2(rawData){
     // accumulator array that will store the final
     // results
     let series = [];
+    console.log(rawData);
     for (let datnum of rawData) {
         // recreate the data point in the format
         // that apex chart expects
         series.push({
             'x': parseInt(datnum.year),
-            'value': parse(datnum.level_1),
-            'sex': parse(datnum.level_2),
+            'value': parseInt(datnum.level_1),
+            'sex': datnum.level_2,
             'y': parseFloat(datnum.value)
 
         })
