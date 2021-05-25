@@ -29,23 +29,23 @@ document.querySelector("#filter-btn").addEventListener('click', function(){
     let filtered = data.filter(function(d){
         return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
     })
-    let filtered2 = data.filter(function(d){
+    let filtered2 = data2.filter(function(d){
         return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
     })
-    let filtered3 = data.filter(function(d){
+    let filtered3 = data3.filter(function(d){
         return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
     })
     chart.updateSeries([
         {
-            'name': "Druggies",
+            'name': "Total drug abusers",
             'data': filtered
         },
         {
-            'name': 'Druggies-female',
+            'name': 'Female drug abusers',
             'data': filtered2
         },
         {
-            'name': 'Druggies-male',
+            'name': 'Male drug abusers',
             'data': filtered3
         },
 
@@ -54,34 +54,28 @@ document.querySelector("#filter-btn").addEventListener('click', function(){
 })
 
 window.addEventListener('DOMContentLoaded',async function(){
-data = await loadData('cTest.json');
+data = await loadData('https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json');
 data = transformData(data);
-data2 = await loadData2("cTest.json");
+data2 = await loadData2("https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json");
 data2 = transformData2(data2);
-data3 = await loadData3('cTest.json');
+data3 = await loadData3('https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json');
 data3 = transformData3(data3);
 
 chart.updateSeries([
 {
-   'name':'Druggies',
+   'name':'Total drug abusers',
    'data': data
 },
 {
-  'name': 'Druggies-female',
+  'name': 'Female drug abusers',
   'data': data2
 },
 {
-  'name': 'Druggies-male',
+  'name': 'Male drug abusers',
   'data': data3
 }
 ])
 })
-
-// wait for all the DOM elements
-// to be created then load in the CSV file
-
-
-//female
 
 
 

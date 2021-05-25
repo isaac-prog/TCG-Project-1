@@ -24,7 +24,7 @@ function transformData(rawData){
     return series;
 }
 
-///////Female/////////////////////////////////
+//Female
 
 async function loadData2(url) {
     const response = await axios.get(url);
@@ -55,7 +55,7 @@ function transformData2(rawData){
     return series;
 }
 
-////////male/////////////
+//male
 
 async function loadData3(url) {
     const response = await axios.get(url);
