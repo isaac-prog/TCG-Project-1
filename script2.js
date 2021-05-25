@@ -12,10 +12,10 @@ const chartOptions = {
 const chart = new ApexCharts(document.querySelector('#chart'), chartOptions);
 chart.render();
 
-
 // global variable
 let data;
-let preFilter;
+let data2;
+let data3;
 
 // event handlers
 document.querySelector("#filter-btn").addEventListener('click', function(){
@@ -29,7 +29,12 @@ document.querySelector("#filter-btn").addEventListener('click', function(){
     let filtered = data.filter(function(d){
         return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
     })
-    
+    let filtered2 = data.filter(function(d){
+        return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
+    })
+    let filtered3 = data.filter(function(d){
+        return d.x >= startYear && d.x <= endYear //&& d.sex == inputSex;
+    })
     chart.updateSeries([
         {
             'name': "Druggies",
@@ -37,17 +42,24 @@ document.querySelector("#filter-btn").addEventListener('click', function(){
         },
         {
             'name': 'Druggies-female',
-            'data': preFilter
-}
+            'data': filtered2
+        },
+        {
+            'name': 'Druggies-male',
+            'data': filtered3
+        },
+
 
     ])
 })
 
 window.addEventListener('DOMContentLoaded',async function(){
-  data = await loadData('cTest.json');
+data = await loadData('cTest.json');
 data = transformData(data);
-preFilter = await loadData2("cTest.json");
-preFilter = transformData2(preFilter);
+data2 = await loadData2("cTest.json");
+data2 = transformData2(data2);
+data3 = await loadData3('cTest.json');
+data3 = transformData3(data3);
 
 chart.updateSeries([
 {
@@ -56,7 +68,11 @@ chart.updateSeries([
 },
 {
   'name': 'Druggies-female',
-  'data': preFilter
+  'data': data2
+},
+{
+  'name': 'Druggies-male',
+  'data': data3
 }
 ])
 })

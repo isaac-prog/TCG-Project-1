@@ -54,3 +54,34 @@ function transformData2(rawData){
     console.log("series2");
     return series;
 }
+
+////////male/////////////
+
+async function loadData3(url) {
+    const response = await axios.get(url);
+    console.log(response.data.Level2);    
+    console.log("load3");
+    return response.data.Level2;
+}
+
+function transformData3(rawData){
+    // accumulator array that will store the final
+    // results
+    let series = [];
+    console.log(rawData);
+
+    for (let datnum of rawData) {
+        // recreate the data point in the format
+        // that apex chart expects
+        if(datnum.level_2 == "Male"){
+        series.push({
+            'x': parseInt(datnum.year),
+            'value': parseInt(datnum.level_1),
+            'sex': datnum.level_2,
+            'y': parseFloat(datnum.value)
+        })
+        }
+    }
+    console.log("series3");
+    return series;
+}
