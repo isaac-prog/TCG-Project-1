@@ -1,10 +1,10 @@
+///////Total/////////////////////////
 async function loadData(url) {
     const response = await axios.get(url);
     console.log(response.data.Level1);
     console.log("load1");
     return response.data.Level1;
 }
-
 
 function transformData(rawData){
     // accumulator array that will store the final
@@ -24,6 +24,7 @@ function transformData(rawData){
     return series;
 }
 
+///////Female/////////////////////////////////
 
 async function loadData2(url) {
     const response = await axios.get(url);
@@ -37,16 +38,18 @@ function transformData2(rawData){
     // results
     let series = [];
     console.log(rawData);
+
     for (let datnum of rawData) {
         // recreate the data point in the format
         // that apex chart expects
+        if(datnum.level_2 == "Female"){
         series.push({
             'x': parseInt(datnum.year),
             'value': parseInt(datnum.level_1),
             'sex': datnum.level_2,
             'y': parseFloat(datnum.value)
-
         })
+        }
     }
     console.log("series2");
     return series;

@@ -34,33 +34,38 @@ document.querySelector("#filter-btn").addEventListener('click', function(){
         {
             'name': "Druggies",
             'data': filtered
-        }
+        },
+        {
+            'name': 'Druggies-female',
+            'data': preFilter
+}
+
     ])
+})
+
+window.addEventListener('DOMContentLoaded',async function(){
+  data = await loadData('cTest.json');
+data = transformData(data);
+preFilter = await loadData2("cTest.json");
+preFilter = transformData2(preFilter);
+
+chart.updateSeries([
+{
+   'name':'Druggies',
+   'data': data
+},
+{
+  'name': 'Druggies-female',
+  'data': preFilter
+}
+])
 })
 
 // wait for all the DOM elements
 // to be created then load in the CSV file
 
-window.addEventListener('DOMContentLoaded', async function(){
-    data = await loadData('https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json');
-    data = transformData(data);
 
-    chart.updateSeries([
-        {
-            'name':'Druggies',
-            'data': data
-        }
-    ])
-})
+//female
 
-window.addEventListener('DOMContentLoaded',async function(){
-    preFilter = await loadData2('https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json');
-    preFilter = transformData2(preFilter);
 
-    chart.updateSeries([
-        {
-            'name':'Druggies',
-            'data': preFilter
-        }
-    ])
-})
+
