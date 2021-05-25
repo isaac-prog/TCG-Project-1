@@ -42,7 +42,7 @@ document.querySelector("#filter-btn").addEventListener('click', function(){
 // to be created then load in the CSV file
 
 window.addEventListener('DOMContentLoaded', async function(){
-    data = await loadData('cTest.json');
+    data = await loadData('https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json');
     data = transformData(data);
 
     chart.updateSeries([
@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', async function(){
 })
 
 window.addEventListener('DOMContentLoaded',async function(){
-    preFilter = await loadData2('cTest.json');
+    preFilter = await loadData2('https://www.tablebuilder.singstat.gov.sg/publicfacing/api/json/title/17079.json');
     preFilter = transformData2(preFilter);
 
     chart.updateSeries([
