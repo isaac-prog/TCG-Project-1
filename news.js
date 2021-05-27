@@ -6,8 +6,8 @@ async function loadNewsApi() {
   newsCounter += 1;
   if (newsCounter>1){
     document.getElementById('news-display').innerHTML = "";}
-  
-  let response = await axios.get('https://gnews.io/api/v4/search?q='+'"'+newsSearch.replace(/\s+/g, '-')+'"'+'&token='+apiKey);
+    let response = await axios.get('news.json');
+    // let response = await axios.get('https://gnews.io/api/v4/search?q='+'"'+newsSearch.replace(/\s+/g, '-')+'"'+'&token='+apiKey);
   updateDisplay(response.data.articles);
   console.log(response.data.articles)
 };
@@ -21,14 +21,12 @@ btn.addEventListener('click', function(){
 function updateDisplay(articles) {
   for (let eachArticles of articles) {
     let htmlSnippet = `<div class="card" style="width: 100%;">
-            <div class="card-body" id="news-body">
+            <div class="card-body" id="news-body"><a href='${eachArticles.url}'>
+            <img src='${eachArticles.image}' style="width:250px;height:170px;margin-right:15px;float: left">
                 <h5 class="card-title">${eachArticles.title}
-                <div class="card-text">
-                    <ul>
-                        <li><a href='${eachArticles.url}'>Url: ${eachArticles.url}</a></li>
-                        <li>Date published: ${eachArticles.publishedAt}</li>
-                    </ul>
-                </div>
+                    <br><small>${eachArticles.description}</small></br>
+                    <p><small>Date published: ${eachArticles.publishedAt}<small></p>
+                    </a>
             </div>
             </div>`
     let newsDisplayDiv = document.querySelector("#news-display");
