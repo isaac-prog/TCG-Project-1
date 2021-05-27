@@ -13,16 +13,13 @@ function updateDisplay(articles) {
                 <h5 class="card-title">${eachArticles.title}
                 <div class="card-text">
                     <ul>
-                        <li>Url: ${eachArticles.url}</li>
+                        <li><a href='${eachArticles.url}'>Url: ${eachArticles.url}</a></li>
                         <li>Date published: ${eachArticles.publishedAt}</li>
                     </ul>
                 </div>
             </div>
             </div>`
-
-
     let newsDisplayDiv = document.querySelector("#news-display");
-
     newsDisplayDiv.innerHTML += htmlSnippet;
   }
 }
