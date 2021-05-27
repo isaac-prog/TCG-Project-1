@@ -1,26 +1,47 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
     <title>News article</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="news.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <div class="nav">
+  <div class="navbar-contents color-black box">
+    <a class="navbar-contents-item button no-display-medium no-display-large burger-right black-hover color-black" onclick="hamburgerHTML()">
+    <i class="fa fa-bars"></i></a>
+    <a href="./" class="navbar-contents-item button color-black">Home</a>
+    <a href="#" class="navbar-contents-item button no-display-small hover-black">Help</a>
+    <a href="#" class="navbar-contents-item button no-display-small hover-black">About Us</a>
+    <a href="statistics.html" class="navbar-contents-item button no-display-small hover-black">Statistics</a>
+    <a href="news.html" class="navbar-contents-item button no-display-small hover-black">News</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navbar" class="navbar-contents-block color-black no-display no-display-large no-display-medium ">
+    <a href="#" class="navbar-contents-item button ">Help</a>
+    <a href="#" class="navbar-contents-item button ">About us</a>
+    <a href="statistics.html" class="navbar-contents-item button ">Statistics</a>
+    <a href="news.html" class="navbar-contents-item button ">News</a>
+  </div>
+</div>
   </head>
+  
   <body>
-    <div class="container">
-      <h2>Illicit drug related news articles</h2>
-      <input type="text" id="news-search" placeholder="e.g. illicit drugs"/>
-      <button id="search-btn">Search</button>
-      
-        <div id="news-display">
-        </div>
+    <h2>Illicit drug related news articles</h2>
+    <div class="textbox-container">
+      <input type="text" id="news-search" class="text-field" 
+      placeholder="e.g. illicit drugs">
+      <button id="search-btn" class="searchbtn"><i class="fas fa-search"></i></button>
     </div>
 
+    <div class="display-container">
+    <div id="news-display"> </div>
+    </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="news.js"></script>
+    <script src='webpage.js'></script>
   </body>
 </html>

@@ -1,0 +1,163 @@
+/* button setup */
+.button{
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:white;
+    background-color:#4d4d4d;
+    text-align:center;
+    cursor: pointer;
+    }
+  
+  /* vertical hamburger setup */
+  .navbar-contents-block .navbar-contents-item{
+    width:100%;
+    display:block;
+    padding:8px 16px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;
+    }
+  
+  .burger-right{float:right!important}
+  
+  .no-display{
+    display:none!important;
+    }
+  .display-burger-block,.display-burger{
+    display:block!important;
+    }
+  
+  /* all the screen sizes variation */
+  @media (max-width:600px){.modal-content{margin:0 10px;width:auto!important}
+  /* .modal{padding-top:30px} */
+  .no-display-small{
+    display:none!important;
+  }
+  }
+  @media (max-width:768px){.modal-content{width:500px}.modal{padding-top:50px}}
+  @media (min-width:993px){.modal-content{width:900px}
+  .no-display-large{display:none!important}
+  }
+  @media (max-width:992px) and (min-width:601px){.no-display-medium{display:none!important}}
+  
+  /* makes navbar static while scrolling */
+  .nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    }
+  
+  .box{
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+    }
+  
+  body{
+      margin:0;
+      padding:0;
+  }
+  
+  /* flexobox and its contents */
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+  
+  .flex-container > div {
+    background-color: #d39e00;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  
+  /* footer */
+  .final-footer{
+    background-color: black;
+    color: white;
+    padding-top:64px!important;
+    padding-bottom:5px!important;
+  }
+  
+  /* hover color */
+  .button:hover{
+    color:#000!important;
+    background-color:#ccc!important;
+    }
+  
+  /* color setup */
+  .color-black,.black-hover:hover{color:#fff!important;background-color:#4d4d4d!important}
+  
+  body{
+	background-color: black;
+}
+
+.textbox-container{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0,0.6);
+    max-width: 550px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.textbox-container .text-field {
+    width: 85%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.searchbtn {
+    background: #ffec00;
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.searchbtn .fas{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+  
+.display-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+  
+  .display-container .news-display {
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  
+  
+  
+  
+  
+  
