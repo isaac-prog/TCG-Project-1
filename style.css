@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 /* button setup */
 .button{
   border:none;
@@ -58,10 +61,11 @@
 
 .page1-center{
 text-align:center!important;
-background-image: url("download.jpg");
+background-image: url("drug-wallpaper.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 height: 70vh;
+padding:128px 16px;
 }
 
 .header-subclass{
