@@ -50,6 +50,7 @@
     position:fixed;
     width:100%;
     top:0;
+    z-index: 9999;
     }
   
   .box{
@@ -58,7 +59,7 @@
 
     .page1-center{
       text-align:center!important;
-      background-image: url("download.jpg");
+      background-image: url("drug-wallpaper.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       height: 70vh;
@@ -149,6 +150,7 @@
   margin-top:16px!important;
   color: white;
   font-size: 3vw;
+  z-index:-1;
 }
   
   

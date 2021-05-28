@@ -20,9 +20,9 @@ btn.addEventListener('click', function(){
 
 function updateDisplay(articles) {
   for (let eachArticles of articles) {
-    let htmlSnippet = `<div class="card" style="width: 100%;">
+    let htmlSnippet = `<div class="card" style="width: 100%;boarder: 10px red">
             <div class="card-body" id="news-body"><a href='${eachArticles.url}'>
-            <img src='${eachArticles.image}' style="width:250px;height:170px;margin-right:15px;float: left">
+            <img src='${eachArticles.image}' style="width:250px;height:170px;margin-right:15px;">
                 <h5 class="card-title">${eachArticles.title}</h5>
                     <br><small>${eachArticles.description}</small></br>
                     <p><small>Date published: ${eachArticles.publishedAt}<small></p>
