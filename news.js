@@ -20,15 +20,15 @@ btn.addEventListener('click', function(){
 
 function updateDisplay(articles) {
   for (let eachArticles of articles) {
-    let htmlSnippet = `<div class="card" style="width: 100%;boarder: 10px red">
-            <div class="card-body" id="news-body"><a href='${eachArticles.url}'>
-            <img src='${eachArticles.image}' style="width:250px;height:170px;margin-right:15px;">
-                <h5 class="card-title">${eachArticles.title}</h5>
-                    <br><small>${eachArticles.description}</small></br>
+    let htmlSnippet = `<a href='${eachArticles.url}' style='text-decoration: none'><div class="card" style="width: 100%; border: 2px solid black">
+            <img src='${eachArticles.image}' style="width:50%;height:50%;margin-right:15px;">
+                <h5 class="card-title" style='font-size:3vw'>${eachArticles.title}</h5>
+                <small style='font-size:2.5vw'>${eachArticles.description}</small>
                     <p><small>Date published: ${eachArticles.publishedAt}<small></p>
-                    </a>
+                    
             </div>
-            </div>`
+            </div>
+            </a>`
     let newsDisplayDiv = document.querySelector("#news-display");
     console.log(newsDisplayDiv)
     newsDisplayDiv.innerHTML += htmlSnippet;
