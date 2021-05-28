@@ -83,15 +83,29 @@ body{
   background-color: black;
 }
 
-.flex-container > div {
-  background-color: #d39e00;
-  height: 300px;
-  width: 300px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
+.flex-space{
+  margin:15px !important;
 }
+
+.flex-card{
+  background-color:#e69800;
+}
+
+.flex-card h4{
+color:#f5e7cd;
+font-size:20px;
+text-transform:uppercase;
+margin:10;
+}
+
+.flex-card .card-body{
+padding-bottom:5px;
+padding-top:5px;
+text-align:center !important;
+}
+
+.flex-card:hover{background-color:#d98500;cursor:pointer}
+.flex-card:hover h4{text-decoration:none;color:black}
 
 /* footer */
 .final-footer{
