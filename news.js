@@ -23,13 +23,14 @@ function updateDisplay(articles) {
     let htmlSnippet = `<div class="card" style="width: 100%;">
             <div class="card-body" id="news-body"><a href='${eachArticles.url}'>
             <img src='${eachArticles.image}' style="width:250px;height:170px;margin-right:15px;float: left">
-                <h5 class="card-title">${eachArticles.title}
+                <h5 class="card-title">${eachArticles.title}</h5>
                     <br><small>${eachArticles.description}</small></br>
                     <p><small>Date published: ${eachArticles.publishedAt}<small></p>
                     </a>
             </div>
             </div>`
     let newsDisplayDiv = document.querySelector("#news-display");
+    console.log(newsDisplayDiv)
     newsDisplayDiv.innerHTML += htmlSnippet;
   }
 }
