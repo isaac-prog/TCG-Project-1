@@ -27,7 +27,7 @@ DrugVio follows theme 2 of the following complexity matrix:
 * User stories:
 As a non-profit anti-drug abuse organisation, I want to provide resources about drug abuse related contents all within a single website so that youths at risk, counsellers and educators can access these materials with ease and to raise awareness of the abuse of drugs.
 
-*link to the wireframe: https://app.moqups.com/mLztc8RnHf/view
+* link to the wireframe: https://app.moqups.com/mLztc8RnHf/view
 
 * Acceptance criteria:
 1. Links to renowned drug counselling websites
