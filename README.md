@@ -10,14 +10,11 @@ DrugVio is a basic informative drug-abuse website that allows user to gather gen
 
 DrugVio follows theme 2 of the following complexity matrix:
 
-Markup : 
 * Consume the GET endpoint of an API, or consume a CSV/JSON file 5
 * Adding or removing DOM elements to the display (map, DOM tree, game screen) base on user's actions 8 
 
-
 ## Features
 The website is targeted to youths to help raise awareness of the issues of drug abuse. The website provides statistics, news and Singapore drug counselling links, allowing youth to search for their information within three clicks.
-
 
 ## Technologies used
 1. [Font awesome](https://fontawesome.com/ "Font Awesome")
@@ -25,7 +22,6 @@ The website is targeted to youths to help raise awareness of the issues of drug 
 2. [ApexCharts](https://apexcharts.com/ "Apex Charts")
    Apex Charts is used for statistic graph in the statistic page
 3. [Axios Library](https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js "Axios Library")
-
 
 ## Testing
 1. Test if webpage is mobile responsive: 
