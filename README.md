@@ -29,13 +29,13 @@ As a non-profit anti-drug abuse organisation, I want to provide resources about 
 
 *link to the wireframe: https://app.moqups.com/mLztc8RnHf/view
 
-*Acceptance criteria:
+* Acceptance criteria:
 1. Links to renowned drug counselling websites
 2. statistic to show drug abuse cases in Singapore
 3. A search engine to search drug-related articles with ease
 
 
-*5 planes of the UX
+* 5 planes of the UX
 1. Surface: The visual design was set to a dark theme, in line with the dark side of drug abuse. The image depicts the chaos and confusion with the needle, indicating the disorientation upon abusing drugs.
 
 2. Skeleton design: The interface was set to a simple yet modern feel to the webpage. As youth has a shorter attention span, the use of less words and more pictorial form will keep them engaged for a longer time. As for the navigation design, all materials can be achieved within 3 clicks, so that the targeted audience will spend a longer time interacting with the website.
