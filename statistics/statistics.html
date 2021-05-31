@@ -27,7 +27,7 @@
   <body>
     <div class="stats-container">
     <div>
-      <h2>Singstats: Line chart Drug abuse in Singapore (2003-2019)</h2>
+      <h2>Singstats: Line chart: Drug abuse in Singapore (2003-2019)</h2>
       <div>
         <input type="text" id="start-year" placeholder="Enter start year"/>
         <input type="text" id="end-year" placeholder="Enter end year"/>
@@ -37,13 +37,18 @@
     </div>
 
     <div>
-      <h2>Singstats: Bar chart Drug abuse in Singapore (2003-2019)</h2>
+      <h2>Singstats: Bar chart: Drug abuse in Singapore (2003-2019)</h2>
       <div>
         <input type="text" id="start-year" placeholder="Enter start year"/>
         <input type="text" id="end-year" placeholder="Enter end year"/>
         <button id="filter-btn2">Filter</button>
       </div>
       <div id="barchart"></div>
+    </div>
+
+    <div>
+      <h2>Singstats: Donut chart: Total male and female drug abusers respectively in Singapore (2003-2019)</h2>
+      <div id="donutchart"></div>
     </div>
 
     </div>
@@ -53,6 +58,9 @@
     <script src="./script.js"></script>
     <script src="./bardata.js"></script>
     <script src="./barscript.js"></script>
+    <script src="./donutdata.js"></script>
+    <script src="./donutscript.js"></script>
+    <script src="../main/webpage.js"></script>
   </body>
 
   <footer class="final-footer">  
