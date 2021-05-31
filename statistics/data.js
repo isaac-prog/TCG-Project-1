@@ -1,8 +1,6 @@
 //Total
 async function loadTotalData(url) {
     const response = await axios.get(url);
-    console.log(response.data.Level1);
-    console.log("load1");
     return response.data.Level1;
 }
 
@@ -19,8 +17,6 @@ function transformTotalData(rawData){
             'y': parseFloat(datnum.value)
         })
     }
-    console.log(series);
-    console.log("series1");
     return series;
 }
 
@@ -28,8 +24,6 @@ function transformTotalData(rawData){
 
 async function loadFemaleData(url) {
     const response = await axios.get(url);
-    console.log(response.data.Level2);    
-    console.log("load2");
     return response.data.Level2;
 }
 
@@ -37,7 +31,6 @@ function transformFemaleData(rawData){
     // accumulator array that will store the final
     // results
     let series = [];
-    console.log(rawData);
 
     for (let datnum of rawData) {
         // recreate the data point in the format
@@ -51,7 +44,6 @@ function transformFemaleData(rawData){
         })
         }
     }
-    console.log("series2");
     return series;
 }
 
@@ -59,8 +51,6 @@ function transformFemaleData(rawData){
 
 async function loadMaleData(url) {
     const response = await axios.get(url);
-    console.log(response.data.Level2);    
-    console.log("load3");
     return response.data.Level2;
 }
 
@@ -68,7 +58,6 @@ function transformMaleData(rawData){
     // accumulator array that will store the final
     // results
     let series = [];
-    console.log(rawData);
 
     for (let datnum of rawData) {
         // recreate the data point in the format
@@ -82,6 +71,5 @@ function transformMaleData(rawData){
         })
         }
     }
-    console.log("series3");
     return series;
 }

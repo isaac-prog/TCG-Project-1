@@ -52,13 +52,10 @@ function transformDonutFemaleData(rawData){
         })
         }
     }
-    
-    console.log(series)
     const lastItem = series[series.length - 1];
     series = [];
     let labels = [];
     labels.push("female")
     series.push(lastItem.y);
-    console.log(series)
     return series;
 }

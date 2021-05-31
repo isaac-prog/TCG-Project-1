@@ -1,8 +1,6 @@
 //Total
 async function loadBarTotalData(url) {
     const response = await axios.get(url);
-    console.log(response.data.Level1);
-    console.log("load1");
     return response.data.Level1;
 }
 
@@ -19,8 +17,6 @@ function transformBarTotalData(rawData){
             'y': parseFloat(datnum.value)
         })
     }
-    console.log(series);
-    console.log("series1");
     return series;
 }
 
@@ -28,8 +24,6 @@ function transformBarTotalData(rawData){
 
 async function loadBarFemaleData(url) {
     const response = await axios.get(url);
-    console.log(response.data.Level2);    
-    console.log("load2");
     return response.data.Level2;
 }
 
@@ -37,7 +31,6 @@ function transformBarFemaleData(rawData){
     // accumulator array that will store the final
     // results
     let series = [];
-    console.log(rawData);
 
     for (let datnum of rawData) {
         // recreate the data point in the format
@@ -51,7 +44,6 @@ function transformBarFemaleData(rawData){
         })
         }
     }
-    console.log("series2");
     return series;
 }
 
@@ -59,8 +51,6 @@ function transformBarFemaleData(rawData){
 
 async function loadBarMaleData(url) {
     const response = await axios.get(url);
-    console.log(response.data.Level2);    
-    console.log("load3");
     return response.data.Level2;
 }
 
@@ -68,7 +58,6 @@ function transformBarMaleData(rawData){
     // accumulator array that will store the final
     // results
     let series = [];
-    console.log(rawData);
 
     for (let datnum of rawData) {
         // recreate the data point in the format
@@ -82,6 +71,5 @@ function transformBarMaleData(rawData){
         })
         }
     }
-    console.log("series3");
     return series;
 }

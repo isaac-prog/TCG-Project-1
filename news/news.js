@@ -9,7 +9,6 @@ async function loadNewsApi() {
     // let response = await axios.get('news.json');
     let response = await axios.get('https://gnews.io/api/v4/search?q='+'"'+newsSearch.replace(/\s+/g, '-')+'"'+'&token='+apiKey);
   updateDisplay(response.data.articles);
-  console.log(response.data.articles)
 };
 
 let btn = document.querySelector('#search-btn');
@@ -30,7 +29,6 @@ function updateDisplay(articles) {
             </div>
             </a>`
     let newsDisplayDiv = document.querySelector("#news-display");
-    console.log(newsDisplayDiv)
     newsDisplayDiv.innerHTML += htmlSnippet;
   }
 }
