@@ -6,8 +6,8 @@ async function loadNewsApi() {
   newsCounter += 1;
   if (newsCounter>1){
     document.getElementById('news-display').innerHTML = "";}
-    let response = await axios.get('news.json');
-    // let response = await axios.get('https://gnews.io/api/v4/search?q='+'"'+newsSearch.replace(/\s+/g, '-')+'"'+'&token='+apiKey);
+    // let response = await axios.get('news.json');
+    let response = await axios.get('https://gnews.io/api/v4/search?q='+'"'+newsSearch.replace(/\s+/g, '-')+'"'+'&token='+apiKey);
   updateDisplay(response.data.articles);
   console.log(response.data.articles)
 };

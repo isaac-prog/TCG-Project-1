@@ -1,7 +1,3 @@
-## DRUGVIO
-
-Foobar is a Python library for dealing with word pluralization.
-
 ## About DRUGVIO
 
 DrugVio is a basic informative drug-abuse website that allows user to gather general information about the abuses of drugs. 
@@ -67,3 +63,4 @@ The website is targeted to youths to help raise awareness of the issues of drug 
 3. Test for searching of news articles.
     a. Enter keywords into the search bar,
     b. everytime a new keyword is searched, the page should clear old contents and provide the latest content based on the keywords searched.
+Note: The news Api only allows up to 100 request a day.

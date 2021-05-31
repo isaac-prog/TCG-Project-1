@@ -24,18 +24,18 @@ let barMaleData;
 document.querySelector("#filter-btn2").addEventListener('click', function(){
   //updateTable("cTest.json");
 
-    let startYear = parseInt(document.querySelector('#start-year').value);
-    let endYear = parseInt(document.querySelector('#end-year').value);
+    let startYearBar = parseInt(document.querySelector('#start-year-bar').value);
+    let endYearBar = parseInt(document.querySelector('#end-year-bar').value);
     //let inputSex = parse(document.querySelector('#sex').value);
 
     let barFiltered = barTotalData.filter(function(d){
-        return d.x >= startYear && d.x <= endYear
+        return d.x >= startYearBar && d.x <= endYearBar
     })
     let barFiltered2 = barFemaleData.filter(function(d){
-        return d.x >= startYear && d.x <= endYear
+        return d.x >= startYearBar && d.x <= endYearBar
     })
     let barFiltered3 = maleData.filter(function(d){
-        return d.x >= startYear && d.x <= endYear
+        return d.x >= startYearBar && d.x <= endYearBar
     })
     barChart.updateSeries([
         {
