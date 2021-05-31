@@ -31,7 +31,7 @@
   <body>
     <div class="stats-container">
     <div>
-      <h2>Singstats: Drug abuse in Singapore (2003-2019)</h2>
+      <h2>Singstats: Line chart Drug abuse in Singapore (2003-2019)</h2>
       <div>
         <input type="text" id="start-year" placeholder="Enter start year"/>
         <input type="text" id="end-year" placeholder="Enter end year"/>
@@ -39,11 +39,24 @@
       </div>
       <div id="chart"></div>
     </div>
+
+    <div>
+      <h2>Singstats: Bar chart Drug abuse in Singapore (2003-2019)</h2>
+      <div>
+        <input type="text" id="start-year" placeholder="Enter start year"/>
+        <input type="text" id="end-year" placeholder="Enter end year"/>
+        <button id="filter-btn2">Filter</button>
+      </div>
+      <div id="barchart"></div>
+    </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="data.js"></script>
     <script src="script.js"></script>
+    <script src="bardata.js"></script>
+    <script src="barscript.js"></script>
   </body>
 
   <footer class="final-footer">  
