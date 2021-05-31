@@ -28,27 +28,27 @@ document.querySelector("#filter-btn2").addEventListener('click', function(){
     let endYear = parseInt(document.querySelector('#end-year').value);
     //let inputSex = parse(document.querySelector('#sex').value);
 
-    let filtered = barTotalData.filter(function(d){
+    let barFiltered = barTotalData.filter(function(d){
         return d.x >= startYear && d.x <= endYear
     })
-    let filtered2 = barFemaleData.filter(function(d){
+    let barFiltered2 = barFemaleData.filter(function(d){
         return d.x >= startYear && d.x <= endYear
     })
-    let filtered3 = maleData.filter(function(d){
+    let barFiltered3 = maleData.filter(function(d){
         return d.x >= startYear && d.x <= endYear
     })
     barChart.updateSeries([
         {
             'name': "Total drug abusers",
-            'data': filtered
+            'data': barFiltered
         },
         {
             'name': 'Female drug abusers',
-            'data': filtered2
+            'data': barFiltered2
         },
         {
             'name': 'Male drug abusers',
-            'data': filtered3
+            'data': barFiltered3
         },
 
 
