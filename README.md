@@ -57,10 +57,16 @@ The website is targeted to youths to help raise awareness of the issues of drug 
     a. Right click and select inspect element
     b. Ctrl + Shift + M (For windows users) OR Cmd + M (For Mac users)
     c. under the responsive dropdown, select desired screen width. Contents on the screen should readjust accordingly
+
 2. Test if filter works in statistics line graph
     a. Enter the start and end year accordingly in the text boxes provided.
     b. Graph should readjust according to the time-frame allocated by you.
-3. Test for searching of news articles.
+    c. Alternatively, highlighting a region in the line/bar chart should cause the chart to filter within the x-axis of the highlighted region
+
+3. Clicking on the legend on the line/bar chart should toggle the view of the chart shown.
+
+4. Test for searching of news articles.
     a. Enter keywords into the search bar,
     b. everytime a new keyword is searched, the page should clear old contents and provide the latest content based on the keywords searched.
-Note: The news Api only allows up to 100 request a day.
+
+Note: The news Api only allows up to 100 request a day due to limitation of using a free plan.
